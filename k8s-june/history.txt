@@ -1,0 +1,1000 @@
+  297  nginx -t
+  298  vi default-jenkins.conf 
+  299  ls
+  300  vi default-jenkins.conf 
+  301  nginx -t
+  302  vi default-jenkins.conf 
+  303  nginx -t
+  304  sudo service nginx restart
+  305  sudo service nginx status
+  306  cat default-jenkins.conf 
+  307  vi default-jenkins.conf 
+  308  sudo service nginx status
+  309  sudo service nginx restart
+  310  sudo service jenkins status
+  311  sudo service jenkins start
+  312  cat /var/lib/jenkins/secrets/initialAdminPassword
+  313  kubectl create namespace argocd
+  314  kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+  315  kubectl get svc -n argocd
+  316  kubectl port-forward argocd-server 844:80
+  317  kubectl get pods -n argocd
+  318  kubectl port-forward argocd-server-6db87f5986-4vbdp 844:80
+  319  kubectl get pods -n argocd
+  320  kubectl port-forward argocd-server-6db87f5986-4vbdp 844:80 -n argocd
+  321  kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
+  322  kubectl port-forward svc/argocd-server -n argocd 8080:443
+  323  kubectl port-forward svc/argocd-server -n argocd 8081:443
+  324  kubectl port-forward svc/argocd-server -n argocd 8081:443 & ls
+  325  argocd admin initial-password -n argocd
+  326  kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+  327  kubectl port-forward svc/argocd-server -n argocd 8081:443 & ls
+  328  ls
+  329  cd ..
+  330  ls
+  331  cd /home
+  332  ls
+  333  cd krish
+  334  ls
+  335  cd k8s-workshop/
+  336  ls
+  337  mkdir newangularapp
+  338  ls
+  339  cd ..
+  340  ls
+  341  mkdir angularapp
+  342  ls
+  343  cd k8s-workshop/
+  344  ls
+  345  cp nginx.yaml ../angularapp/
+  346  ls
+  347  cd ..
+  348  ls
+  349  git clone https://github.com/krishank98/argocd-angular
+  350  ls
+  351  ssh-keygen
+  352  ls
+  353  cat /root/.ssh/id_rsa.pub
+  354  ls
+  355  cd argocd-angular/
+  356  ls
+  357  cd ..
+  358  ls
+  359  cd angularapp/
+  360  LS
+  361  ls
+  362  cp nginx.yaml ../argocd-angular/
+  363  ls
+  364  cd ..
+  365  ls
+  366  cd argocd-angular/
+  367  ls
+  368  git add .
+  369  git commit -m "assfs"
+  370  git push
+  371  ssh-keygen
+  372  git push
+  373  ls
+  374  kubectl get ns
+  375  ls
+  376  mkdir nginx-dep
+  377  ls
+  378  mv nginx.yaml nginx-dep/
+  379  ls
+  380  git add .
+  381  git commit -m "sfsd"
+  382  git push
+  383  ls
+  384  kubectl get pods -n servers
+  385  ls
+  386  cd nginx-dep/
+  387  ls
+  388  vi nginx.yaml 
+  389  git add .
+  390  git commit -m "sfsdss"
+  391  git push
+  392  ssh-keygen
+  393  ls
+  394  cat /root/.ssh/id_rsa.pub
+  395  ls
+  396  kubectl get pods -n servers
+  397  kubectl delete nginx-cd55c47f5-qtqdv
+  398  kubectl delete pod nginx-cd55c47f5-qtqdv
+  399  ls
+  400  kubectl get pods -n servers
+  401  ls
+  402  cd ..
+  403  ls
+  404  kubectl port-forwad nginx-deployment 83:80
+  405  kubectl port-forward nginx-deployment 83:80
+  406  ls
+  407  history
+  408  kubectl port-forward nginx-deployment-76b76495c8-29brf 83:80
+  409  helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+  410  helm repo add grafana https://grafana.github.io/helm-charts
+  411  helm install prometheus prometheus-community/prometheus --namespace prometheus --set alertmanager.persistentVolume.storageClass="gp2" --set server.persistentVolume.storageClass="gp2"
+  412  kubectl create namespace prometheus
+  413  helm install prometheus prometheus-community/prometheus --namespace prometheus --set alertmanager.persistentVolume.storageClass="gp2" --set server.persistentVolume.storageClass="gp2"
+  414  kubectl delete namespace prometheus
+  415  helm repo update
+  416  helm install studio-prom prometheus-community/kube-prometheus-stac
+  417  kubectl create namespace prometheus
+  418  helm upgrade -i prometheus prometheus-community/prometheus –namespace prometheus
+  419  helm upgrade helm install prometheus prometheus-community/prometheus prometheus prometheus-community/prometheus –namespace prometheus
+  420  helm install prometheus prometheus-community/prometheus
+  421  helm install prometheus prometheus-community/prometheus -n prometheus
+  422  kubectl --namespace prometheus port-forward $POD_NAME 9091
+  423  kubectl get pods -n prometheus
+  424  kubectl --namespace prometheus port-forward prometheus-server-56487bb585-xtlnx 9091
+  425  kubectl get pods -n prometheus
+  426  kubectl expose service prometheus-server — type=NodePort — target-port=9090 — name=prometheus-server-ext
+  427  kubectl expose service prometheus-server —type=NodePort —target-port=9090 —name=prometheus-server-ext
+  428  kubectl expose service prometheus-server —-type=NodePort —-target-port=9090 —name=prometheus-server-ext
+  429  kubectl expose service prometheus-server —-type=NodePort —-target-port=9090 —-name=prometheus-server-ext
+  430  kubectl get pods -n prometheus
+  431  kubectl delete namespace prometheus
+  432  ls
+  433  kubectl get all
+  434  ls
+  435  cd ..
+  436  ls
+  437  kubectl get pods
+  438  ls
+  439  kubectl get pods
+  440  kubectl apply -f deploymeta-auth-service.yml
+  441  ls
+  442  vi deploymeta-auth-service.yml 
+  443  kubectl apply -f deploymeta-auth-service.yml
+  444  vi deploymeta-auth-service.yml 
+  445  kubectl apply -f deploymeta-auth-service.yml
+  446  vi deploymeta-auth-service.yml 
+  447  kubectl apply -f deploymeta-auth-service.yml
+  448  vi deploymeta-auth-service.yml 
+  449  cat deploymeta-auth-service.yml 
+  450  ls
+  451  vi sample.yml
+  452  kubectl apply -f sample.yml 
+  453  vi sample2.yml
+  454  kubectl apply -f sample2.yml 
+  455  ls
+  456  kubectl get pods
+  457  cd piggymetrics-working/
+  458  ls
+  459  cd K8S/
+  460  LS
+  461  ls
+  462  curl -L https://github.com/kubernetes/kompose/releases/download/v1.28.0/kompose-linux-amd64 -o kompose
+  463  chmod +x kompose
+  464  sudo mv ./kompose /usr/local/bin/kompose
+  465  ls
+  466  cd ..
+  467  ls
+  468  cp docker-compose-win.yml K8S/
+  469  ls
+  470  cd K8S/
+  471  LS
+  472  ls
+  473  cat rabbitmq-service.yaml 
+  474  ls
+  475  mkdir tried
+  476  ls
+  477  mv deploymeta-auth-service.yml tried
+  478  mv sample.yml tried
+  479  mv sample2.yml tried
+  480  ls
+  481  cd kompose/
+  482  ls
+  483  rm -rf docker-compose-win.yml 
+  484  ls
+  485  kubectl apply -f ./
+  486  kubectl delete -f ./
+  487  kubectl create namespace piggymetrics
+  488  ls
+  489  kubectl config set-context --current --namespace=piggymetrics
+  490  kubectl apply -f ./
+  491  kubectl get poda
+  492  kubectl get pods
+  493  ls
+  494  cd ..
+  495  ls
+  496  cat docker-compose-win.yml 
+  497  ls
+  498  cd kompose/
+  499  ls
+  500  kubectl get pods
+  501  kubectl port-forward gateway-5666dc9cf5-lvz2z 86:4000
+  502  kubectl port-forward gateway-5666dc9cf5-lvz2z 86:85
+  503  ls
+  504  cat gateway-deployment.yaml 
+  505  kubectl get pods
+  506  ls
+  507  kubectl get pods
+  508  exit
+  509  ls
+  510  kubectl get pods
+  511  ls
+  512  kubectl get ns
+  513  kubectl get pods -ns servers
+  514  kubectl get pods -n servers
+  515  kubectl get pods --all-namespaces
+  516  kubectl get svc -n servers
+  517  kubectl run nginx --image=nginx -n servers --restart=never
+  518  kubectl run nginx --image=nginx -n servers --restart=Never
+  519  kubectl get po -n servers
+  520  kubectl run nginx --image=nginx -n servers --restart=Never --dry-run -o yaml
+  521  kubectl describe pod nginx -n servers
+  522  kubectl run nginx --image=nginx:1.17.4 -n servers --restart=Never --port=76
+  523  kubectl run nginx1 --image=nginx:1.17.4 -n servers --restart=Never --port=76
+  524  kubectl get po nginx -o wide
+  525  kubectl get po nginx -o wide -n servers
+  526  kubectl run busybox --image=busybix --restart=Never -- ls
+  527  kubectl run busybox --image=busybix --restart=Never -- ls -n servers
+  528  kubectl run busybox --image=busybix --restart=Never -n servers
+  529  kubectl run busybox --image=busybox --restart=Never --ls -n servers
+  530  kubectl run busybox --image=busybox --restart=Never -n servers
+  531  kubectl logs busybox -p
+  532  kubectl logs busybox -p -n servers
+  533  kubectl logs busybox -p 
+  534  kubectl get pods nginx --v=7
+  535  ls
+  536  kubectl get pods
+  537  ls
+  538  cd pythod-app/
+  539  ls
+  540  cd django-todo-cicd/
+  541  ls
+  542  docker-compose up
+  543  apt-get install python3.6
+  544  kubectl get pods
+  545  ls
+  546  mkdir pythod-app
+  547  ls
+  548  cd pythod-app/
+  549  ls
+  550  git clone https://github.com/krishank98/django-todo-cicd
+  551  ls
+  552  cd django-todo-cicd/
+  553  ls
+  554  docker-compose up
+  555  sudo apt install docker-compose
+  556  ls
+  557  docker-compose up
+  558  ls
+  559  dols
+  560  cat Dockerfile 
+  561  docker build -t app .
+  562  sudo systemctl start docker
+  563  cd pythod-app/
+  564  ls
+  565  cd django-todo-cicd/
+  566  ls
+  567  docker-compose up -d
+  568  docker ps
+  569  docker-compose ps
+  570  curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_${arch}.deb"
+  571  dpkg -i gitlab-runner_.deb 
+  572  ls
+  573  dpkg -i gitlab-runner_.deb 
+  574  ls
+  575  mv gitlab-runner_.deb gitlab-runner.deb 
+  576  dpkg -i gitlab-runner.deb 
+  577  ls
+  578  cd ..
+  579  ls
+  580  curl -LJO "https://gitlab-runner-downloads.s3.amazonaws.com/latest/deb/gitlab-runner_${arch}.deb"
+  581  ls
+  582  dpkg -i gitlab-runner_.deb 
+  583  cat /os/releases
+  584  cat /etc/releases
+  585  cd /etc/
+  586  ls
+  587  cat os-release 
+  588  sudo apt install gitlab-runner
+  589  sudo apt install gitlab
+  590  curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" | sudo bash
+  591  sudo apt-get install gitlab-runner
+  592  ls
+  593  cd /home/ubuntu
+  594  ls
+  595  cd /home/krish
+  596  ls
+  597  cd pythod-app/
+  598  ls
+  599  cd django-todo-cicd/
+  600  ls
+  601  sudo gitlab-runner register
+  602  gitlab-runner register  --url https://gitlab.com  --token glrt-s7xJWnVjGEvTsvH9TACT
+  603  wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |sudo gpg --dearmor -o /usr/share/keyrings/jenkins.gpg
+  604  sudo sh -c 'echo deb [signed-by=/usr/share/keyrings/jenkins.gpg] http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  605  sudo apt update
+  606  curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee   /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+  607  echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+  608  sudo apt-get update
+  609  sudo apt-get install jenkins
+  610  systectl status jenkins
+  611  systemctl status jenkins
+  612  service jenkins status
+  613  service jenkins start
+  614  service jenkins status
+  615  ls
+  616  vi /var/lib/jenkins/config.xml 
+  617  service jenkins restart
+  618  LS
+  619  sudo apt remove jenkins
+  620  ls
+  621  cd ..
+  622  ls
+  623  cd ..
+  624  ls
+  625  mkdir linux-prc
+  626  ls
+  627  cd linux-prc/
+  628  ls
+  629  cd /etc/log
+  630  ls
+  631  cd /var/log
+  632  ls
+  633  man ls
+  634  $?
+  635  cat $?
+  636  ls lrta
+  637  ls -lrta
+  638  diff lastlog dpkg.log
+  639  cat faillog
+  640  cd nginx
+  641  ls
+  642  diff access.log error.log 
+  643  man id
+  644  source ./bashrc
+  645  cd /home/krish
+  646  ls
+  647  source ./bashrc
+  648  ls
+  649  ll
+  650  source ./.bashrc
+  651  kubectl get pods
+  652  ls
+  653  cd linux-prc
+  654  ls
+  655  cd /var/log
+  656  ls
+  657  cat faillog 
+  658  cat bootstrap.log 
+  659  ls
+  660  cat bootstrap.log|sort
+  661  cat bootstrap.log|sort >>sorted.txt
+  662  ls
+  663  echo sorted.txt
+  664  cat bootstrap.log|sort >>sorted.txt
+  665  ls
+  666  cat sorted.txt 
+  667  sort -k 4n sorted.txt 
+  668  head -n 10 sorted
+  669  head -n 10 sorted.txt 
+  670  head -n 100 sorted.txt 
+  671  ls
+  672  sed 's/installed/suck' sorted.txt
+  673  sed 's/installed/suck/' sorted.txt
+  674  head -n 100 sorted.txt 
+  675  sed 's/installed/suck/gi' sorted.txt
+  676  head -n 100 sorted.txt 
+  677  sed 's/installed./suck/gi' sorted.txt
+  678  head -n 100 sorted.txt 
+  679  sed -i 's/installed./suck/gi' sorted.txt
+  680  head -n 100 sorted.txt 
+  681  ls
+  682  locate nginx
+  683  apt install plocate
+  684  locate findme.txt
+  685  locate -i findme.txt
+  686  ls
+  687  grep "^Learn" sorted.txt 
+  688  grep "^suck" sorted.txt 
+  689  grep "suck" sorted.txt 
+  690  grep -v suck sorted.txt 
+  691  grep -v "suck" sorted.txt 
+  692  getent passwd
+  693  getent passwd | games
+  694  getent passwd | grep "games"
+  695  ls - l aws '{print}'
+  696  ls - l awk '{print}'
+  697  getent passwd | awk -F:'{print $1}'
+  698  getent passwd | awk -f:'{print $1}'
+  699  pid
+  700  tty
+  701  uid
+  702  uuid
+  703  ps
+  704  id -u krish
+  705  cd nop
+  706  ls
+  707  ps -axjf
+  708  ls
+  709  cd /home/krish
+  710  ls
+  711  cd linux-prc/
+  712  ls
+  713  vi sam.sh
+  714  source sam.sh
+  715  vi sam.sh
+  716  ls
+  717  source sam.sh
+  718  ls
+  719  vi sam.sh
+  720  source sam.sh
+  721  bash sam.sh
+  722  bash sam.sh 2>&1 &
+  723  bash sam.sh 2>&1 
+  724  which bash
+  725  ping google.com
+  726  netstat -tulpn | grep LISTEN
+  727  cat /var/log/syslog
+  728  cat /var/log/messages
+  729  free
+  730  uptime
+  731  df -fh
+  732  df -dh
+  733  df -h
+  734  cd ervfs
+  735  cd drvfs
+  736  apt install lsof -y
+  737  lsof more
+  738  lsof /var/log
+  739  lsof lsof
+  740  sar -s
+  741  apt install sysstat
+  742  ls
+  743  sar -r
+  744  sar -v
+  745  ls
+  746  vi /etc/default/sysstat
+  747  sudo service sysstat restart
+  748  sar -v
+  749  sar -r
+  750  vmstat
+  751  vmstat -n
+  752  vmstat -a
+  753  vmstat -f
+  754  vmstat -s
+  755  vmstat -d
+  756  vmstat 1 4
+  757  vmstat -n 15
+  758  apt install corkscrew
+  759  ls
+  760  ss -tulw
+  761  ss -tulwn
+  762  printenv
+  763  export krish="dhd"
+  764  printenv
+  765  printenv |grep krish
+  766  ls
+  767  whatis find
+  768  strace
+  769  stat /var/log/sorted.txt 
+  770  nslookup google.com
+  771  telnet google.com
+  772  ifconfig
+  773  ifconfig |grep inet
+  774  df -i
+  775  ls
+  776  cd krish
+  777  ls
+  778  ll
+  779  chmod g+w app
+  780  ls
+  781  ll
+  782  ls
+  783  cp -R app /home
+  784  ls
+  785  cd ..
+  786  ls
+  787  cd krish
+  788  ls
+  789  ll
+  790  cat .profile
+  791  id krish1
+  792  stat krish1
+  793  ls
+  794  cd angularapp/
+  795  ls
+  796  stat nginx.yaml 
+  797  who
+  798  whoami
+  799  ls
+  800  wc nginx.yaml 
+  801  ls
+  802  man wc
+  803  ls
+  804  head -n 10 nginx
+  805  head -n 10 nginx.yaml 
+  806  head -n 10 nginx.yaml | tail -2 nginx.yaml 
+  807  ls
+  808  wc nginx.yaml 
+  809  ls
+  810  tail -2 nginx.yaml 
+  811  tail -5 nginx.yaml 
+  812  head -10 nginx.yaml 
+  813  head -10 nginx.yaml | tail -2 nginx.yaml 
+  814  head -10 nginx.yaml | tail -5 nginx.yaml 
+  815  head -10 nginx.yaml | tail -5 
+  816  LS
+  817  ls
+  818  tee --help
+  819  ls
+  820  cd ..
+  821  ls
+  822  mkdir python-scripting
+  823  ls
+  824  cd python-scripting/
+  825  ls
+  826  vi cpu.py
+  827  sudo apt install python3
+  828  ls
+  829  python3 cpu.py
+  830  pip3 install psutil
+  831  apt install python3-pip
+  832  ls
+  833  pip install psutil
+  834  python3 cpu.py
+  835  ls
+  836  vi cpu_average.py
+  837  python3 cpu_average.py 
+  838  python3 cpu.py
+  839  sudo apt install stress
+  840  sudo stress --cpu 8 --timeout 200
+  841  python3 cpu.py
+  842  python3 cpu_average.py 
+  843  uptime
+  844  sudo stress --cpu 8 -v --timeout 30s
+  845  python3 cpu_average.py 
+  846  uptime
+  847  ls
+  848  vi ram.py
+  849  python3 ram.py
+  850  vi ram.py
+  851  python3 ram.py
+  852  ls
+  853  mv ram.py ram_problem.py
+  854  ls
+  855  vi ram_os.py
+  856  ls
+  857  python3 ram_os.py
+  858  vi ram_os.py
+  859  python3 ram_os.py
+  860  ls
+  861  vi monitoring_myugan.py
+  862  python3
+  863  ls
+  864  vi monitoring_myugan.py
+  865  ls
+  866  python3 monitoring_myugan.py 
+  867  pip install cpuinfo
+  868  pip3 install cpuinfo
+  869  pip3 install py-cpuinfo
+  870  python3 monitoring_myugan.py 
+  871  ls
+  872  vi monitoring_myugan.py 
+  873  python3 monitoring_myugan.py 
+  874  vi monitoring_myugan.py 
+  875  python3 monitoring_myugan.py 
+  876  vi monitoring_myugan.py 
+  877  python3 monitoring_myugan.py 
+  878  vi monitoring_myugan.py 
+  879  python3 monitoring_myugan.py 
+  880  vi monitoring_myugan.py 
+  881  python3 monitoring_myugan.py 
+  882  vi monitoring_myugan.py 
+  883  python3 monitoring_myugan.py 
+  884  vi monitoring_myugan.py 
+  885  python3 monitoring_myugan.py 
+  886  ls
+  887  git clone https://github.com/krishank98/python-scripting
+  888  ls
+  889  mv * python-scripting/
+  890  ls
+  891  cd python-scripting/
+  892  ls
+  893  git add .
+  894  git commit -m "first"
+  895  git push
+  896  ls
+  897  ssh-keygen
+  898  ls
+  899  cat /root/.ssh/id_rsa.pub
+  900  git push
+  901  ls
+  902  aws configure
+  903  ls
+  904  vi boto3-ec2.py
+  905  ls
+  906  python3 boto3-ec2.py 
+  907  vi boto3-ec2.py
+  908  python3 boto3-ec2.py 
+  909  pip3 install boto3
+  910  python3 boto3-ec2.py 
+  911  vi boto3-ec2.py
+  912  python3 boto3-ec2.py 
+  913  ls
+  914  vi boto3-ec2-terminate.py
+  915  python3 boto3-ec2-terminate.py.py 
+  916  python3 boto3-ec2-terminate.py
+  917  ls
+  918  git add .
+  919  git commit -m "2nd"
+  920  git push
+  921  ls
+  922  vi boto3-ec2-keypair.py
+  923  ls
+  924  vi boto3-ec2-all.py
+  925  python3 boto3-ec2-all.py 
+  926  vi boto3-ec2-all.py
+  927  python3 boto3-ec2-all.py 
+  928  vi boto3-ec2-all.py
+  929  python3 boto3-ec2-all.py 
+  930  ls
+  931  python3 boto3-ec2-all.py 
+  932  vi boto3-ec2-all.py
+  933  python3 boto3-ec2-all.py 
+  934  vi boto3-ec2-all.py
+  935  python3 boto3-ec2-all.py 
+  936  ls
+  937  vi error_boto3-ec2-all-py
+  938  git add .
+  939  git commit -m "3rd commit"
+  940  git push
+  941  ls
+  942  locate findme.txt
+  943  ls
+  944  where nginx
+  945  whereis
+  946  whereis nginx
+  947  locate nginx
+  948  ls
+  949  ps -aux
+  950  ps -ely
+  951  top
+  952  htop
+  953  renice 10 109
+  954  getent
+  955  getent passwd
+  956  ls
+  957  cd vim /etc/hosts
+  958  sudo apt update -y install slapd -utils
+  959  sudo apt update -y
+  960  sudo apt install slapd-utils -y
+  961  sudo apt install slapd -utils -y
+  962  sudo apt-get install slapd
+  963  systemctl enable slapd
+  964  ldappasswd
+  965  systemctl start slapd
+  966  ls
+  967  wc -l boto3-ec2.py
+  968  wc boto3-ec2.py
+  969  wc -e boto3-ec2.py
+  970  wc -w boto3-ec2.py
+  971  echo hello
+  972  echo hello|cut -c1
+  973  echo "hello-students-hi"|cut c1-4
+  974  echo "hello-students-hi"|cut -c1-4
+  975  echo "hello-students-hi"|cut -c1-7
+  976  echo "hello-students-hi"|cut -f1
+  977  echo "hello-students-hi"|cut -f2
+  978  echo "hello-students-hi"|cut -d"" -f1
+  979  echo "hello-students-hi"|cut -d"" f1
+  980  echo "hello-students-hi"|cut -d"" 12
+  981  echo "hello-students-hi"|cut -d"" 
+  982  ls
+  983  cd ..
+  984  ls
+  985  cd python-scripting/
+  986  ls
+  987  git status
+  988  cd ..
+  989  ls
+  990  cd ..
+  991  ls
+  992  cd linux-prc/
+  993  ls
+  994  vi state.txt
+  995  cut -b 1,2,3 state.txt
+  996  cut -b 1,-3,5,-7 state.txt
+  997  cut -b 1[2~-3,5,-7 state.txt
+  998  cut -b 1-3,5-7 state.txt
+  999  cut -b 10- state.txt 
+ 1000  cut -b 1- state.txt 
+ 1001  cut -b -3 state.txt 
+ 1002  cut -c 2,5,7 state.txt
+ 1003  uname -r
+ 1004  uname -a
+ 1005  uname -m
+ 1006  man uname
+ 1007  sudo vim /etc/ssh/sshd
+ 1008  cd /etc/ssh
+ 1009  ls
+ 1010  vi ssh_config
+ 1011  systemctl restart sshd
+ 1012  service restart ssshd
+ 1013  service sshd restart
+ 1014  sudo service docker status
+ 1015  docker ps
+ 1016  docker stop $(docker ps -a -q)
+ 1017  docker ps
+ 1018  ls
+ 1019  cd ..
+ 1020  ls
+ 1021  cd /home/krish
+ 1022  ls
+ 1023  mkdir dockerfiles
+ 1024  ls
+ 1025  cd dockerfiles/
+ 1026  ls
+ 1027  vi golang
+ 1028  docker build -t golang .
+ 1029  ls
+ 1030  docker build -t golang . -f goland
+ 1031  docker build -t golang . -f golang
+ 1032  vi golang
+ 1033  docker build -t golang . -f golang
+ 1034  vi golang
+ 1035  vi golang-bugfix
+ 1036  docker build -t golang-bugfix . -f golang-bugfix
+ 1037  ls
+ 1038  docker run -itd golang-bugfix
+ 1039  ls
+ 1040  docker ps
+ 1041  docker kill 61c9cf1b03c8
+ 1042  docker ps
+ 1043  ls
+ 1044  git clone https://github.com/krishank98/setra
+ 1045  ls
+ 1046  cd ls
+ 1047  ls
+ 1048  cd setra
+ 1049  ls
+ 1050  vi dockerfile-springboot-setra
+ 1051  ls
+ 1052  cd ..
+ 1053  ls
+ 1054  vi dockerfile-springboot-setra
+ 1055  ls
+ 1056  cd setra
+ 1057  ls
+ 1058  ln dockerfile-springboot-setra ../dockerfile-springboot-setra 
+ 1059  ln dockerfile-springboot-setra ../
+ 1060  ln dockerfile-springboot-setra ../dockerfile-springboot-setra1 
+ 1061  ls
+ 1062  vi dockerfile-springboot-setra 
+ 1063  docker  build -t spring-setra . -f dockerfile-springboot-setra 
+ 1064  ls
+ 1065  gradlew build
+ 1066  ./gradlew clean build
+ 1067  ls
+ 1068  docker ps
+ 1069  ls
+ 1070  mkdir GFG
+ 1071  LS
+ 1072  ls
+ 1073  cd GFG/
+ 1074  ls
+ 1075  mkdir demo2
+ 1076  ls
+ 1077  cd demo2/
+ 1078  ls
+ 1079  echo sample.txt
+ 1080  ls
+ 1081  touch sample.txt
+ 1082  cat "text1" >>sample.txt
+ 1083   "text1" << sample.txt
+ 1084  echo "text1" >>sample.txt
+ 1085  ls
+ 1086  cat sample.txt q
+ 1087  cat sample.txt 
+ 1088  echo "text2" >>sample.txt
+ 1089  echo "text3" >>sample.txt
+ 1090  echo "text4" >>sample.txt
+ 1091  echo "text5" >>sample.txt
+ 1092  cat sample.txt 
+ 1093  ls
+ 1094  find ./GFG -name sample.txt
+ 1095  cd ..
+ 1096  ls
+ 1097  cd ..
+ 1098  ls
+ 1099  find ./GFG -name sample.txt
+ 1100  cd GFG/demo2/
+ 1101  ls
+ 1102  touch sampe2.txt
+ 1103  cd ..
+ 1104  ls
+ 1105  cd ..
+ 1106  ls
+ 1107  find ./GFG -name *.txt
+ 1108  ls
+ 1109  find -name *.txt
+ 1110  ls
+ 1111  find ./GFG/demo2 -name *.txt
+ 1112  ls
+ 1113  find ./GFG -name sample.txt -exec rm -i {} \;
+ 1114  ls
+ 1115  find ./GFG -empty
+ 1116  find ./GFG -perm 664
+ 1117  ls
+ 1118  cat > geekfile.txt
+ 1119  ls
+ 1120  vi geekfile.txt 
+ 1121  sed 's/unix/linux/' geekfile.txt
+ 1122  sed 's/unix/linux/2' geekfile.txt
+ 1123  sed 's/unix/linux/3g' geekfile.txt
+ 1124  echo "Welcome To The Geek Stuff" | sed 's/\(\b[A-Z]\)/\(\1\)/g'
+ 1125  sed -n 's/unix/linux/p' geekfile.txt
+ 1126  sudo apt install strace
+ 1127  strace ls
+ 1128  strace -c ls
+ 1129  strace -e trace=network nc -v -n 127.0.0.1 801
+ 1130  ls
+ 1131  python3
+ 1132  ls
+ 1133  cd linux-prc/
+ 1134  ls
+ 1135  kubectl get pods
+ 1136  kubectl get ns
+ 1137  docker ps
+ 1138  kubectl top pods busybox --containers
+ 1139  ls
+ 1140  kubectl run multi-cont-pod --image=busybox --restart=Never --dry-run -o yaml >multicontainer.yaml
+ 1141  kubectl run multi-cont-pod --image=busybox --restart=Never --dry-run=client -o yaml >multicontainer.yaml
+ 1142  ls
+ 1143  cd ..
+ 1144  ls
+ 1145  cd eks-masterclass/
+ 1146  ls
+ 1147  kubectl run multi-cont-pod --image=busybox --restart=Never --dry-run=client -o yaml >multicontainer.yaml
+ 1148  ls
+ 1149  cat multicontainer.yaml 
+ 1150  kubectl create -f multi-container.yaml
+ 1151  kubectl create -f multicontainer.yaml
+ 1152  ls
+ 1153  cat multicontainer.yaml 
+ 1154  kubectl create -f multicontainer.yaml --ns default
+ 1155  ls
+ 1156  kubectl ge pods
+ 1157  kubectl get pods
+ 1158  kubectl get pods ns default
+ 1159  kubectl get pods --n default
+ 1160  kubectl get pods -n default
+ 1161  kubectl run pods --image=nginx
+ 1162  kubectl create namespace practice
+ 1163  kubectl config set-context --current --namespace=practice
+ 1164  ls
+ 1165  kubectl run nginx --image=nginx --restart=Never
+ 1166  ls
+ 1167  kubectl get pods --show-labels
+ 1168  ls
+ 1169  kubectl get pods
+ 1170  kubectl run nginx-dev1 --image=nginx --restart=Never --labels=env=dev
+ 1171  kubectl run nginx-dev2 --image=nginx --restart=Never --labels=env=dev
+ 1172  kubectl run nginx-dev3 --image=nginx --restart=Never --labels=env=dev
+ 1173  kubectl run nginx-prod1 --image=nginx --restart=Never --labels=env=prod
+ 1174  kubectl run nginx-prod2 --image=nginx --restart=Never --labels=env=prod
+ 1175  kubectl get pods --show-labels
+ 1176  kubectl get pods -l env=dev
+ 1177  ls
+ 1178  kubectl get pods -l env=dev --show-labels
+ 1179  kubectl get pods -L env=dev
+ 1180  kubectl get pods -L env
+ 1181  kubectl get pods -l 'env in (dev,prod)'
+ 1182  kubectl get pods -l 'env in (dev,prod)' --show-labels
+ 1183  kubectl label pod/nginx-dev3 env=uat --overwrite
+ 1184  kubectl get pods -l 'env in (dev,prod)' --show-labels
+ 1185  kubectl get pods -L env
+ 1186  kubectl get pods --show-labels
+ 1187  kubectl label pod nginx-dev{1..3} env-
+ 1188  kubectl label pod nginx-prod{1..2} env-
+ 1189  kubectl get pods --show-labels
+ 1190  kubectl label pod nginx-prod{1..2} app=nginx
+ 1191  kubectl label pod nginx-dev{1..3} app=nginx
+ 1192  kubectl get pods --show-labels
+ 1193  kubectl get nodes --show-labels
+ 1194  kubectl get po nginx | grep Node-Selectors
+ 1195  kubectl get pods | grep Labels
+ 1196  kubectl get nodes --show-labels
+ 1197  kubectl annotate pod nginx-dev{1..3} name=webapp
+ 1198  kubectl annotate pod nginx-prod{1..2} name=webapp
+ 1199  kubectl describe pod nginx-prod{1..2} name=webapp | grep -i annotations
+ 1200  kubectl describe pod nginx-dev{1..3} name=webapp | grep -i annotations
+ 1201  kubectl annotate pod nginx-prod{1..2} name-
+ 1202  kubectl annotate pod nginx-dev{1..3} name-
+ 1203  kubectl describe pod nginx-dev{1..3} name=webapp | grep -i annotations
+ 1204  kubectl  delete po --all
+ 1205  kubectl create deploy webapp --image=nginx --dry-run -o yaml > webapp.yaml
+ 1206  kubectl create deploy webapp --image=nginx --dry-run=client -o yaml > webapp.yaml
+ 1207  ls
+ 1208  cat webapp.yaml 
+ 1209  ls
+ 1210  kubectl create -f webapp.yaml 
+ 1211  ls
+ 1212  kubectl get deploy webapp --show-labels
+ 1213  ls
+ 1214  kubectl get pods --show-labels
+ 1215  kubectl get pods -l app=webapp
+ 1216  ls
+ 1217  vi webapp.yaml 
+ 1218  kubectl create -f webapp.yaml 
+ 1219  ls
+ 1220  kubectl delete -f webapp.yaml 
+ 1221  kubectl create -f webapp.yaml 
+ 1222  kubectl get pods -l name=webapp
+ 1223  ld
+ 1224  ls
+ 1225  kubectl get pods -l name=webapp
+ 1226  kubectl get pods
+ 1227  kubectl get deploy webapp --show-labels
+ 1228  kubectl get pods
+ 1229  kubectl get ns
+ 1230  kubectl get pods
+ 1231  ls
+ 1232  mkdir k8s-june
+ 1233  ls
+ 1234  cd k8s-
+ 1235  cd k8s-june/
+ 1236  ls
+ 1237  kubectl get deploy webapp -o yaml
+ 1238  kubectl get deploy webapp -o yaml << deploy.yaml
+ 1239  kubectl get deploy webapp -o yaml >> deploy.yaml
+ 1240  ls
+ 1241* 
+ 1242  cat deploy.yaml | more
+ 1243  ls
+ 1244  kubectl get deploy --show-labels
+ 1245  kubectl get pods -l app=webapp
+ 1246  kubectl scale deploy webapp --replicas=20
+ 1247  ls
+ 1248  kubectl get pods
+ 1249  kubectl get pods >> deploy-20
+ 1250  ls
+ 1251  cat deploy-20 
+ 1252  ls
+ 1253  kubectl get po -l app=webapp
+ 1254  kubectl rollout status deploy webapp
+ 1255  kubectl scale deploy webapp --replicas=10
+ 1256  kubectl get po -l app=webapp
+ 1257  kubectl get rs -l app=webapp
+ 1258  kubectl get rs -l app=webapp -o yaml
+ 1259  kubectl get rs -l app=webapp -o yaml >> deploy10-rs.yaml
+ 1260  ls
+ 1261  cay deploy10-rs.yaml 
+ 1262  cat deploy10-rs.yaml 
+ 1263  kubectl get po -l app=webapp -o yaml >> deploy10-po.yaml
+ 1264  cat deploy10-po.yaml 
+ 1265  kubectl delete deploy webapp
+ 1266  kubectl get pod -l app=webapp -w
+ 1267  kubectl get po -l app=webapp -w
+ 1268  kubectl create deploy webapp --image=nginx:1.17.1 --dry-run -o yaml > webapp.yaml
+ 1269  kubectl create deploy webapp --image=nginx:1.17.1 --dry-run=client -o yaml > webapp.yaml
+ 1270  ls
+ 1271  cat webapp.yaml 
+ 1272  ls
+ 1273  kubectl create -f webapp.yaml 
+ 1274  kubectl get pods
+ 1275  ls
+ 1276  kubectl describe deploy webapp | grep image
+ 1277  kubectl describe deploy webapp | grep Image
+ 1278  kubectl set image deploy/webapp nginx=nginx:1.17.4
+ 1279  kubectl describe deploy webapp | grep Image
+ 1280  kubectl rollout history deploy webapp
+ 1281  kubectl get deploy webapp --show-labels
+ 1282  kubectl get rs -l app=webapp
+ 1283  kubectl get po -l app=webapp
+ 1284  kubectl rollout undo deploy webapp
+ 1285  kubectl describe deploy webapp | grep Image
+ 1286  kubectl set image deploy/webapp nginx=nginx:1.16.1
+ 1287  kubectl describe deploy webapp | grep Image
+ 1288  kubectl rollout undo deploy webapp
+ 1289  kubectl set image deploy/webapp nginx=nginx:1.16.1
+ 1290  kubectl describe deploy webapp | grep Image
+ 1291  kubectl rollout history deploy webapp
+ 1292  kubectl rollout undo deploy webapp --to-revision=5
+ 1293  kubectl describe deploy webapp | grep Image
+ 1294  kubectl rollout status deploy webapp
+ 1295  history
+ 1296  history >> history.txt
