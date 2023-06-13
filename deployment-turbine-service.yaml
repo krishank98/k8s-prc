@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: turbine-stream-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: piggymetrics
+  template:
+    metadata:
+      labels:
+        app: piggymetrics
+    spec:
+      containers:
+      - name: turbine-stream-service
+        image: sqshq/piggymetrics-turbine-stream-service
+        ports:
+          - containerPort: 8989
+        env:
+          - name : CONFIG_SERVICE_PASSWORD
+            value: CONFIG_SERVICE_PASSWORD
+
+        resources:
+           requests:
+              memory: "64Mi"
+              cpu: "250m"
+           limits:
+              memory: "128Mi"
+              cpu: "500m"

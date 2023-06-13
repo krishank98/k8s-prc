@@ -1,0 +1,28 @@
+NAME                                      READY   STATUS             RESTARTS         AGE
+account-service-7c45bb86b6-2d4p7          0/1     CrashLoopBackOff   28 (106s ago)    124m
+account-service-7c45bb86b6-gwlhs          0/1     CrashLoopBackOff   28 (64s ago)     124m
+account-service-7c45bb86b6-pll2v          0/1     CrashLoopBackOff   28 (83s ago)     124m
+auth-service-545c89bf5b-9jbq7             0/1     CrashLoopBackOff   24 (4m41s ago)   106m
+auth-service-545c89bf5b-lrfx5             0/1     CrashLoopBackOff   24 (4m37s ago)   106m
+auth-service-545c89bf5b-sxgcq             1/1     Running            25 (5m12s ago)   106m
+config-6b9b575d4b-ddc9c                   0/1     OOMKilled          25 (5m27s ago)   106m
+config-6b9b575d4b-jjg5h                   0/1     CrashLoopBackOff   25 (23s ago)     106m
+config-6b9b575d4b-ls8qj                   0/1     CrashLoopBackOff   24 (5m2s ago)    106m
+gateway-6b77b79969-j4j5v                  0/1     CrashLoopBackOff   23 (3m48s ago)   100m
+gateway-6b77b79969-qfzzd                  0/1     Pending            0                100m
+gateway-6b77b79969-sklrw                  0/1     CrashLoopBackOff   23 (4m11s ago)   100m
+mongodb-c988fdb4c-4bb52                   0/1     Pending            0                97m
+mongodb-c988fdb4c-6csrv                   0/1     Pending            0                97m
+mongodb-c988fdb4c-b2bxb                   0/1     Pending            0                97m
+monitoring-67679d5c89-7xrrx               0/1     Pending            0                14m
+monitoring-67679d5c89-mdbsj               0/1     Pending            0                14m
+monitoring-67679d5c89-th8v4               0/1     Pending            0                14m
+notification-service-5c5b7999bd-274qt     0/1     Pending            0                11m
+notification-service-5c5b7999bd-96jlm     0/1     Pending            0                11m
+notification-service-5c5b7999bd-w44fl     0/1     Pending            0                11m
+registry-8574f78757-qznxt                 0/1     Pending            0                8m50s
+registry-8574f78757-tmxc9                 0/1     Pending            0                8m50s
+registry-8574f78757-tw6vw                 0/1     Pending            0                8m50s
+turbine-stream-service-57fb566b4f-5kfvz   0/1     Pending            0                2m2s
+turbine-stream-service-57fb566b4f-cj2pf   0/1     Pending            0                2m2s
+turbine-stream-service-57fb566b4f-n6qln   0/1     Pending            0                2m2s

@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monitoring
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: piggymetrics
+  template:
+    metadata:
+      labels:
+        app: piggymetrics
+    spec:
+      containers:
+      - name: monitoring
+        image: sqshq/piggymetrics-monitoring
+        ports:
+         - containerPort: 8080
+        env:
+          - name : CONFIG_SERVICE_PASSWORD
+            value: CONFIG_SERVICE_PASSWORD
+        resources:
+           requests:
+              memory: "64Mi"
+              cpu: "250m"
+           limits:
+              memory: "128Mi"
+              cpu: "500m"
